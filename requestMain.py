@@ -12,7 +12,7 @@ for i in s["availableCourses"]:
     c+=1
     print(c,i["name"]+"=",i["id"])
     l.append(int(i["id"]))
-user=int(input("enter id no.:-"))-1
+user=int(input("enter id no.:-"))
 if user in l:
     a=requests.get("http://saral.navgurukul.org/api/courses/"+str(l[user])+"/exercises")
     T=a.json()
